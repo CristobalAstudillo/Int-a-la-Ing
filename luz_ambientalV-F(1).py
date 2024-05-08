@@ -1,5 +1,4 @@
 from machine import Pin  
-
 import time            
 
 ldr = machine.ADC(27) 
