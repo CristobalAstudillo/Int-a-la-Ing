@@ -1,5 +1,4 @@
 from machine import Pin  
-
 import time            
 
 ldr = machine.ADC(27)  # Inicializa un convertor analogico-digital para pin 27
