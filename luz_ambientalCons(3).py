@@ -1,12 +1,11 @@
 from machine import Pin
+import time
 
 mucha_luz=5000
 luz_moderada=15000
 poca_luz=25000               
 no_luz=25001                
-
-import time            
-
+        
 ldr = machine.ADC(27)  
 
 while True:
