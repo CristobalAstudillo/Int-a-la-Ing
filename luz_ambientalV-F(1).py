@@ -8,7 +8,7 @@ while True:
     ldr_value = ldr.read_u16() 
     print("LDR Value:", ldr_value)  
     luz=ldr_value
-    if luz > 0:
+    if luz < 20000:
         print("Hay luz")
     else:
         print("No hay luz")
