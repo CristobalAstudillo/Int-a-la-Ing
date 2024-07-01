@@ -1,3 +1,6 @@
+//Este código fue creado por Bitwise Ar como parte de su serie "Arduino desde cero en español".
+//Nosotros tomamos este código como base para nuestro proyecto y lo modificamos para que se adaptara a nuestras necesidades.
+//Créditos correspondientes a Bitwise Ar por la creación del código.
 
 #include "LedControl.h"     // incluye libreria LedControl
 
