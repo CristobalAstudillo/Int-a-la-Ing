@@ -1,3 +1,11 @@
+/*
+	A pesar de que este proyecto se dejó por el de la PyBike, he de mencionar que el código
+    presente lo sacamos de la página https://www.instructables.com/ y del siguente artículo escrito
+    por el usuario "cryp7o" en la misma página: 
+    https://www.instructables.com/LDR-Light-Sensor-on-Raspberry-Pi-Pico/
+    Nosotros tomamos este código y lo modificamos para nuestro uso en específico.
+*/
+
 from machine import Pin  
 import time            
 
