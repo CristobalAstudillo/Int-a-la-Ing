@@ -1,6 +1,7 @@
-//Este código le pertence al canal de youtube Bitwise Ar.
+//Este código le pertence al canal de youtube Bitwise Ar y a su serie "Arduino desde cero en español".
+//Este código fue sacado del capítulo 43 de esta serie.
 //Nosotros tomamos este código y lo modificamos para que se adaptara a nuestras necesidades.
-//Todos los créditos a Bitwise Ar por la creación del código
+//Todos los créditos a Bitwise Ar por la creación del código.
 
 
 #include "LedControl.h"     // incluye libreria LedControl
