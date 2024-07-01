@@ -1,5 +1,7 @@
 //Este código le pertence al canal de youtube Bitwise Ar y a su serie "Arduino desde cero en español".
-//Este código fue sacado del capítulo 43 de esta serie.
+//Este código fue sacado del capítulo 43 del siguente repositorio github:
+//https://github.com/bitwiseAr/Curso-Arduino-desde-cero/blob/master/Capitulo43/
+//Más especificamente, del archivo "Capitulo43-Programa3.txt"
 //Nosotros tomamos este código y lo modificamos para que se adaptara a nuestras necesidades.
 //Todos los créditos a Bitwise Ar por la creación del código.
 
