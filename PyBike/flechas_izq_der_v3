@@ -1,0 +1,125 @@
+#include "LedControl.h"
+
+LedControl lc = LedControl(11, 13, 10, 1);
+
+const int DEMORA = 250;
+const int BOTON_IZQ = 3;
+const int BOTON_DER = 2;
+const int trigPin = 6;
+const int echoPin = 7;
+const int buzzerPin = 4;
+long duration;
+int distance;
+
+int resis_fotoR1 = 0;
+
+bool leer = false;
+
+
+byte flecha_normal[9][8] = {
+  {B00000000, B00011000, B00111100, B01111110, B11011011, B00011000, B00011000, B00011000},
+  {B00011000, B00111100, B01111110, B11011011, B00011000, B00011000, B00011000, B00000000},
+  {B00111100, B01111110, B11011011, B00011000, B00011000, B00011000, B00000000, B00011000},
+  {B01111110, B11011011, B00011000, B00011000, B00011000, B00000000, B00011000, B00111100},
+  {B11011011, B00011000, B00011000, B00011000, B00000000, B00011000, B00111100, B01111110},
+  {B00011000, B00011000, B00011000, B00000000, B00011000, B00111100, B01111110, B11011011},
+  {B00011000, B00011000, B00000000, B00011000, B00111100, B01111110, B11011011, B00011000},
+  {B00011000, B00000000, B00011000, B00111100, B01111110, B11011011, B00011000, B00011000},
+};
+
+byte flecha_inversa[9][8] = {
+  {B00011000, B00000000, B00011000, B00111100, B01111110, B11011011, B00011000, B00011000},
+  {B00011000, B00011000, B00000000, B00011000, B00111100, B01111110, B11011011, B00011000},
+  {B00011000, B00011000, B00011000, B00000000, B00011000, B00111100, B01111110, B11011011},
+  {B11011011, B00011000, B00011000, B00011000, B00000000, B00011000, B00111100, B01111110},
+  {B01111110, B11011011, B00011000, B00011000, B00011000, B00000000, B00011000, B00111100},
+  {B00111100, B01111110, B11011011, B00011000, B00011000, B00011000, B00000000, B00011000},
+  {B00011000, B00111100, B01111110, B11011011, B00011000, B00011000, B00011000, B00000000},
+  {B00000000, B00011000, B00111100, B01111110, B11011011, B00011000, B00011000, B00011000},
+};
+
+void setup() {
+   pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(buzzerPin, OUTPUT);
+  Serial.begin(9600);
+  
+  lc.shutdown(0, false);
+  lc.setIntensity(0, 5);
+  lc.clearDisplay(0);
+
+  pinMode(BOTON_IZQ, INPUT);
+  pinMode(BOTON_DER, INPUT);
+}
+
+void loop() { 
+
+
+ resis_fotoR1 = analogRead(0);
+  Serial.print("R ldr 1: ");
+  Serial.println(resis_fotoR1);
+  delay(250);
+
+  leer = (resis_fotoR1 > 40);
+
+  if (!leer) {
+    for (int fila = 0; fila < 8; fila++) { // itera por las filas
+      for (int columna = 0; columna < 8; columna++) { // itera por las columnas
+        lc.setLed(0, fila, columna, true); // enciende todos los LEDs en la fila
+      }
+      delay(150); // demora de 150 mseg.
+    }
+  }
+  
+  if (digitalRead(BOTON_IZQ) == HIGH) {
+    for (int j = 0; j < 9; j++) {
+      mostrar(flecha_normal, j);
+      delay(DEMORA);
+    }
+  }
+
+  if (digitalRead(BOTON_DER) == HIGH) {
+    for (int j = 0; j < 8; j++) {
+      mostrar(flecha_inversa, j);
+      delay(DEMORA);
+    }
+  }
+
+  lc.clearDisplay(0);
+}
+
+
+void mostrar(byte flecha[9][8], int frame) {
+  for (int i = 0; i < 8; i++) {
+    lc.setRow(0, i, flecha[i][frame]);
+  }
+}
+  
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+ 
+  duration = pulseIn(echoPin, HIGH);
+
+
+
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  
+  if (distance < 20) {
+    tone(buzzerPin, 2000, 500);
+  } else {
+    noTone(buzzerPin);
+  }
+
+  delay(100);
+}
+
