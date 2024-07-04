@@ -1,13 +1,13 @@
 # Proyecto PyBike V1.5
 Integrantes:
 - Cristobal Astudillo
-    * Rol Usm: 20243013-K
+    * * *Rol Usm: 20243013-K* *
 - Francisco Bugueño
-    * Rol Usm: 202430014-8
+    * * *Rol Usm: 202430014-8* *
 - Lucas Verdejo
-    * Rol Usm: 202430
+    * * *Rol Usm: 202430* *
 - Patricio Celis
-    * Rol Usm: 202430
+    * * *Rol Usm: 202430* *
 
 ## Pequeña Introducción
 Nosotros somos un grupo de alumnos de [Universidad Federico Santa María](https://usm.cl/) que está cursando su primer año de la carrera [Ingeniería civil Telemática](https://usm.cl/admision/carreras/ingenieria-civil-telematica/).
