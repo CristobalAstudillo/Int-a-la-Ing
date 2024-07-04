@@ -24,7 +24,9 @@ Desde el principio que teníamos claro que tipo de modificaciones le vendrían b
 
 - Existen señas que el conductor del ciclo puede realizar mientras conduce para indicar si va a girar a la derecha o a la izquierda, pero estas señas involucran no tener ambos manos en el volante. Entonces, decimos usar una [**matriz de leds de tamaño 8x8**](https://afel.cl/producto/matriz-de-leds-8x8-max-7219/) y unos botones, izquierda y derecha, para que cuando el conductor presione uno de estos botones en la matriz de leds se muestre una **_flecha en movimiento correspondiente al botón pulsado_**. Eliminando así la necesidad de las señas y asegurarse de que el conductor del ciclo tenga las dos manos en el volante.
 
-- Aprovechando la matriz de leds, y el código que teníamos del descartado proyecto de la calculadora, decidimos añadir algo que, he de reconocer, es una modificación que uno ya puede comprar, que es una [**luz trasera para la bicicleta**](https://listado.mercadolibre.cl/luz-trasera-bicicleta). Comentando entre nosotros, dicidimos que no era necesario que la luz estuviera prendida todo el tiempo, dado que ha plena luz del día no era necesario, pero si era necesario cuando hubiera poca o ausencia de luz. Asi que, usando una [**fotoresistencia**](https://www.mechatronicstore.cl/fotoresistencia-ldr-5mm/) hicimos que, cuando haya poca o ausencia de luz, se prendieran todos los leds de la matriz para que así los autos puedan saber que ahí hay una bicicleta. Esta idea tambíen surgió dado que, lamentablemente, los conductores de ciclo, o al menos la mayoría, *_no ocupa chalecos reflectantes en situaciones de escasa luz_*.
+- Aprovechando la matriz de leds, y el código que teníamos del descartado proyecto de la calculadora, decidimos añadir algo que, he de reconocer, es una modificación que uno ya puede comprar, que es una [**luz trasera para la bicicleta**](https://listado.mercadolibre.cl/luz-trasera-bicicleta).
+
+  Comentando entre nosotros, dicidimos que no era necesario que la luz estuviera prendida todo el tiempo, dado que ha plena luz del día no era       necesario, pero si era necesario cuando hubiera poca o ausencia de luz. Asi que, usando una [**fotoresistencia**](https://www.mechatronicstore.cl/fotoresistencia-ldr-5mm/) hicimos que, cuando haya poca o ausencia de luz, se prendieran todos los leds de la       matriz para que así los autos puedan saber que ahí hay una bicicleta. Esta idea tambíen surgió dado que, lamentablemente, los conductores de       ciclo, o al menos la mayoría, *_no ocupa chalecos reflectantes en situaciones de escasa luz_*.
 
 Aparte de estas dos ideas principales, nuestro compañero Francisco, tuvo una idea que tambíen podríamos montar un [**sensor ultrasónico**](https://afel.cl/producto/sensor-de-ultrasonico-hc-sr04/) y un [**buzzer**](https://maxelectronica.cl/prototipo/293-buzzer-zumbador-activo-5-volts.html) en la parte de atrás del ciclo para que actuara cómo un sensor de proximidad para que el conductor estuviera más conciente de su alrededor.
 
@@ -37,6 +39,6 @@ Teniendo las ideas claras, nos pusimos manos a la obra. Antes de instalar todo e
 
 Una vez desmantelada la antigua PyBike, trasladamos lo que teníamos en la **protoboard** a bicicleta. Resultando en un proyecto funcional, pero *_completamente mejorable tanto en el área estética cómo práctica_*.
 
-
+### Código Originales
 
 
