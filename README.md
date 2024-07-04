@@ -1,5 +1,5 @@
 # Proyecto PyBike V1.5
-Hecho por:
+Integrantes:
 - Cristobal Astudillo
     * Rol Usm: 20243013-K
 - Francisco Bugueño
