@@ -4,10 +4,10 @@ Integrantes:
   * *Rol Usm: 20243013-K*
 - Francisco Bugueño
   * *Rol Usm: 202430014-8*
-- Lucas Verdejo
-  *  *Rol Usm: 202430*
 - Patricio Celis
-  * *Rol Usm: 202430*
+  * *Rol Usm: 202430020-2*
+- Lucas Verdejo
+  *  *Rol Usm: 202430006-7*
 
 ## Pequeña Introducción
 Nosotros somos un grupo de alumnos de [Universidad Federico Santa María](https://usm.cl/) que está cursando su primer año de la carrera [Ingeniería civil Telemática](https://usm.cl/admision/carreras/ingenieria-civil-telematica/).
@@ -43,6 +43,19 @@ Teniendo las ideas claras, nos pusimos manos a la obra. Antes de instalar todo e
 
 Una vez desmantelada la antigua PyBike, trasladamos lo que teníamos en la **protoboard** a bicicleta. Resultando en un proyecto funcional, pero *_completamente mejorable tanto en el área estética cómo práctica_*.
 
+# Importante
 ### Código Originales
+
+Los código base para la **_bicicleta_**, los cual modificamos para que se adaptaran a nuestras necesidades, fue creado originalmente por el usuario en Youtube [Bitwise Ar](https://www.youtube.com/c/BitwiseAr) en su serie de "Arduino desde cero en español". Los códigos que utilizamos fueron dos y los dos fueron sacados de este [repositorio github](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/tree/master), más especificamente del [capítulo 43](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/tree/master/Capitulo43). Estos códigos fueron:
+
+- [*Capítulo 43-Programa1*](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/blob/master/Capitulo43/Capitulo43-Programa1.txt)
+  - Este código fue modificado para que cuando haya ausencia o poca luz, todos los leds de la pantalla se mantegan prendidos. Reutilizando, de cierta manera, el concepto del proyecto de la calculadora.
+
+- [*Capítulo 43-Programa2*](https://github.com/bitwiseAr/Curso-Arduino-desde-cero/blob/master/Capitulo43/Capitulo43-Programa3.txt)
+  - Este código fue modificado para que cuando el usuario pulse el bóton de la izquierda, o de la derecha, aparezca en pantalla la flecha correspondiente, hasta que el usuario deje de pulsarlo.
+
+Los código base para la **_calculadora_** fue creado originalmente por el usuario cryp7o para la página [**Instructables**](https://www.instructables.com/) en [**este artículo**](https://www.instructables.com/LDR-Light-Sensor-on-Raspberry-Pi-Pico/).
+
+
 
 
